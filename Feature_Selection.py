@@ -20,7 +20,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
 
 
-# Applying model
+# Applying models
 from sklearn.ensemble import ExtraTreesClassifier,RandomForestClassifier
 import sklearn.feature_selection
 import matplotlib.pyplot as plt
@@ -31,9 +31,8 @@ model.fit(X_train_res, y_train_res)
 model2.fit(X_train_res, y_train_res)
 
 # Recursive Feature Elimination
-from sklearn.feature_selection import RFE
-
 # create the RFE model and select 4 attributes
+from sklearn.feature_selection import RFE
 rfe = RFE(model, 4)
 rfe = rfe.fit(X_train_res, y_train_res)
 rfe2 = RFE(model, 4)
