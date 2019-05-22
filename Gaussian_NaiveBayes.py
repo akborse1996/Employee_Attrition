@@ -6,10 +6,11 @@ Created on Thu Apr 18 16:34:09 2019
 @author: amol.borse
 """
 
+#importing pandas library to load dada
 
 import pandas as pd
 
-# Importing the dataset
+# Loading dataset
 dataset = pd.read_csv('D:/ML/train.csv')
 X = dataset.iloc[:, 0:9]
 y = dataset.iloc[:, -1:]
